@@ -17,13 +17,11 @@ type Story = StoryObj<typeof Form>
 export const Default: Story = {};
 
 export const Testing: Story = {
-  play: async ({ canvasElement  }) =>{
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole("textbox");
     await expect(input).toHaveTextContent("");
     await userEvent.type(input, "play function");
     await expect(canvas.getByDisplayValue("play function")).toBeInTheDocument();
   }
-
-
 }
