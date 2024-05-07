@@ -1,9 +1,8 @@
-
 import Form from "./Form";
-import type { Meta, StoryObj } from "@storybook/react"
-import { within } from "@testing-library/react";
+import type { Meta, StoryObj } from "@storybook/react";
+import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
-import { userEvent } from "@testing-library/user-event";
+import { userEvent } from "@storybook/testing-library";
 
 const meta = {
   title:"Form",
